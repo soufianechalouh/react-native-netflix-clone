@@ -46,7 +46,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="comingSoon"
         options={{
           title: "Coming soon",
           headerShown: false,
@@ -56,7 +56,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="three"
+        name="search"
         options={{
           title: "Search",
           tabBarIcon: ({ color }) => (
@@ -65,7 +65,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="four"
+        name="downloads"
         options={{
           title: "Downloads",
           tabBarIcon: ({ color }) => (
