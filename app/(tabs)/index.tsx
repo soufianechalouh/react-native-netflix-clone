@@ -1,7 +1,7 @@
 import { StyleSheet, FlatList } from "react-native";
 
 import { Text, View } from "@/components/Themed";
-import MovieImage from "@/components/MoviePoster";
+import MoviePoster from "@/components/MoviePoster";
 import categories from "@/assets/data/categories";
 
 const firstCategory = categories.items[0];
@@ -12,7 +12,7 @@ export default function HomeScreen() {
       <Text style={styles.title}>Popular on Netflix</Text>
       <FlatList
         data={firstCategory.movies}
-        renderItem={({ item }) => <MovieImage path={item.poster} />}
+        renderItem={({ item }) => <MoviePoster path={item.poster} />}
         horizontal
       />
     </View>

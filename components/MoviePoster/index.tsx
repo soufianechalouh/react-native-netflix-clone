@@ -1,6 +1,6 @@
 import { Image, StyleSheet } from "react-native";
 
-export default function MovieImage({ path }: { path: string }) {
+export default function MoviePoster({ path }: { path: string }) {
   return (
     <Image
       style={styles.image}
