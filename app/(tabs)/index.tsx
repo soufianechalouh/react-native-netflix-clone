@@ -1,26 +1,5 @@
-import { StyleSheet, FlatList } from "react-native";
+import HomeScreen from "@/screens/HomeScreen";
 
-import { View } from "@/components/Themed";
-import categories from "@/assets/data/categories";
-import HomeCategory from "@/components/HomeCategory";
-
-export default function HomeScreen() {
-  return (
-    <View style={styles.container}>
-      <FlatList
-        data={categories.items}
-        renderItem={({ item }) => <HomeCategory category={item} />}
-      />
-    </View>
-  );
+export default function Home() {
+  return <HomeScreen />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
-  },
-});
