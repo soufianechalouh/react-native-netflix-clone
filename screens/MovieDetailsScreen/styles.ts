@@ -36,6 +36,33 @@ const styles = StyleSheet.create({
     color: "black",
     fontWeight: "bold",
   },
+  playButton: {
+    backgroundColor: "white",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 5,
+    borderRadius: 3,
+    marginVertical: 5,
+  },
+  playButtonText: {
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  downloadButton: {
+    backgroundColor: "#2b2b2b",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 5,
+    borderRadius: 3,
+    marginVertical: 5,
+  },
+  downloadButtonText: {
+    color: "white",
+  },
+  plot: {
+    color: "white",
+    marginVertical: 10,
+  },
 });
 
 export default styles;
