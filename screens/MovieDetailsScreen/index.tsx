@@ -1,7 +1,13 @@
-import { Text, StyleSheet, View, Image, Pressable } from "react-native";
+import { Text, View, Image, Pressable } from "react-native";
 import styles from "./styles";
 import movie from "@/assets/data/movie";
-import { AntDesign, Entypo, MaterialIcons } from "@expo/vector-icons";
+import {
+  AntDesign,
+  Entypo,
+  Feather,
+  FontAwesome,
+  MaterialIcons,
+} from "@expo/vector-icons";
 
 const firstEpisode = movie.seasons.items[0].episodes.items[0];
 
@@ -41,7 +47,22 @@ export default function MovieDetailsScreen() {
       <Text style={styles.year}>Creator: {movie.creator}</Text>
 
       {/* Row with icon buttons */}
-      <View style={{ flexDirection: "row" }}></View>
+      <View style={{ flexDirection: "row", marginTop: 20 }}>
+        <View style={styles.iconContainer}>
+          <AntDesign name="plus" size={24} color="white" />
+          <Text style={styles.iconText}>My List</Text>
+        </View>
+
+        <View style={styles.iconContainer}>
+          <Feather name="thumbs-up" size={24} color="white" />
+          <Text style={styles.iconText}>Rate</Text>
+        </View>
+
+        <View style={styles.iconContainer}>
+          <FontAwesome name="send-o" size={24} color="white" />
+          <Text style={styles.iconText}>Share</Text>
+        </View>
+      </View>
     </View>
   );
 }

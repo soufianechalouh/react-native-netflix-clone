@@ -63,6 +63,13 @@ const styles = StyleSheet.create({
     color: "white",
     marginVertical: 10,
   },
+  iconText: {
+    color: "darkgrey",
+    marginTop: 5,
+  },
+  iconContainer: {
+    alignItems: "center",
+    marginHorizontal: 20 },
 });
 
 export default styles;
