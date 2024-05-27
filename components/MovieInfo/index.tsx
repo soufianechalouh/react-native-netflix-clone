@@ -1,10 +1,19 @@
 import { Pressable } from "react-native";
 import { View, Text } from "../Themed";
 import styles from "./styles";
-import { AntDesign, Entypo, Feather, FontAwesome, MaterialIcons } from "@expo/vector-icons";
+import {
+  AntDesign,
+  Entypo,
+  Feather,
+  FontAwesome,
+  MaterialIcons,
+} from "@expo/vector-icons";
 import movie from "@/assets/data/movie";
+import { Picker } from "@react-native-picker/picker";
+import { useState } from "react";
 
 export default function MovieInfo() {
+  const seasonNames = movie.seasons.items.map((season) => season.name);
   return (
     <>
       <Text style={styles.title}>{movie.title}</Text>
@@ -55,6 +64,16 @@ export default function MovieInfo() {
           <Text style={styles.iconText}>Share</Text>
         </View>
       </View>
+
+      <Picker
+        selectedValue={""}
+        style={{ color: "white" }}
+        onValueChange={(itemValue, itemIndex) => {}}
+      >
+        {seasonNames.map((seasonName) => (
+          <Picker.Item label={seasonName} value={seasonName} key={seasonName} />
+        ))}
+      </Picker>
     </>
   );
 }
