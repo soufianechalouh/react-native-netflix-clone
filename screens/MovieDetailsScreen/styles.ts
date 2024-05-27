@@ -46,7 +46,6 @@ const styles = StyleSheet.create({
   playButtonText: {
     fontSize: 16,
     fontWeight: "bold",
-    color: "black",
   },
   downloadButton: {
     backgroundColor: "#2b2b2b",
