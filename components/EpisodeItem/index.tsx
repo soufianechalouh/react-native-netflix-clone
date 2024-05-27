@@ -17,7 +17,7 @@ interface EpisodeItemProps {
 export default function EpisodeItem(props: EpisodeItemProps) {
   const { episode } = props;
   return (
-    <View>
+    <View style={{ marginVertical: 10 }}>
       <View style={styles.row}>
         <Image style={styles.image} source={{ uri: episode.poster }} />
         <View style={styles.titleContainer}>
