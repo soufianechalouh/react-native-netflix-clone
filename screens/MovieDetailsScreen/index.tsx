@@ -12,18 +12,21 @@ import {
 import EpisodeItem from "@/components/EpisodeItem";
 import { Picker } from "@react-native-picker/picker";
 import { useState } from "react";
+import VideoPlayer from "@/components/VideoPlayer";
 
-const firstEpisode = movie.seasons.items[0].episodes.items[0];
 const firstSeason = movie.seasons.items[0];
 
 export default function MovieDetailsScreen() {
   const [currentSeason, setCurrentSeason] = useState(firstSeason);
+  const [currentEpisode, setCurrentEpisode] = useState(
+    firstSeason.episodes.items[0]
+  );
 
   const seasonNames = movie.seasons.items.map((season) => season.name);
 
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={{ uri: firstEpisode.poster }} />
+      <VideoPlayer episode={currentEpisode} />
       <FlatList
         data={currentSeason.episodes.items}
         renderItem={({ item }) => <EpisodeItem episode={item} />}

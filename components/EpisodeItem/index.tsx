@@ -2,16 +2,10 @@ import { Image, StyleSheet } from "react-native";
 import { View, Text } from "../Themed";
 import styles from "./styles";
 import { AntDesign } from "@expo/vector-icons";
+import { Episode } from "@/types";
 
 interface EpisodeItemProps {
-  episode: {
-    id: string;
-    title: string;
-    poster: string;
-    duration: string;
-    plot: string;
-    video: string;
-  };
+  episode: Episode;
 }
 
 export default function EpisodeItem(props: EpisodeItemProps) {
